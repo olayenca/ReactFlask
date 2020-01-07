@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: Olayinka Otuniyi
-Created on Wed Dec 18 07:48:00 2019
+Created on Tue Jan  7 21:56:38 2020
+
+@author: olayinkaotuniyi
 """
-#!/usr/bin/env python
 import platform
 from os import path, walk
 from templates import app

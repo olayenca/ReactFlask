@@ -15,7 +15,7 @@ module.exports = env => ({
 		filename: "[name].bundle.js",
 		path: path.resolve(__dirname, "./build/dist/"),
 		chunkFilename: "[name].bundle.js",
-		publicPath: env === "production" ? "./" : "./"
+		publicPath: env === "production" ? "./" : "./" //todo redundant condition?
 	},
 	resolve: {
 		extensions: ['.js', '.tsx', '.scss', '.ts']
