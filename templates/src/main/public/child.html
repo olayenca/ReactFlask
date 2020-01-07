@@ -1,0 +1,30 @@
+{% extends "index.html" %} {% block title %}- Flask{% endblock %} {% block head %} {{ super() }}
+<style type="text/css">
+	#__title0-inner {
+		font-size: x-large;
+		font-weight: 900
+	}
+	footer {
+		border-top: 1px solid gainsboro;
+		bottom: 0;
+		position: fixed;
+		width: 99%;
+		text-align: right;
+		margin: 0;
+	}
+
+	header {
+		text-align: center;
+		font-weight: 900;
+		font-size: 4vmin;
+		border-bottom: 1px solid gainsboro;
+	}
+</style>
+{% endblock head %} {% block content %} 
+{% include "header.html" %}
+	{% react root}
+<div class="from--extension">
+	<p>Test String from block !</p>
+</div>
+{% include "footer.html" %} 
+{% endblock %}

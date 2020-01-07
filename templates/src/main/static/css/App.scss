@@ -1,0 +1,194 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@font-face {
+	font-family: "Source Sans Pro";
+	src: local('Source Sans Pro'), url("../fonts/SourceSansPro-Regular.ttf") format('truetype'), 
+	local('Source Sans Pro'), url("../fonts/SourceSansPro-Regular.otf") format("opentype"), 
+	local('Source Sans Pro'), url("../fonts/SourceSansPro-Regular.ttf?#iefix") format('embedded-opentype'), 
+	local('Source Sans Pro'), url("../fonts/SourceSansPro-Regular.woff2") format("woff2")
+}
+
+/*Variables*/
+$body-font-normal: 2vmin; 
+$body-font-title: 4vmin;
+
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #09d3ac;
+  }
+	
+	@mixin keyframes($animation-name) {
+		@-webkit-keyframes #{
+			$animation-name
+		}
+		{
+			@content;
+		}
+		@-moz-keyframes #{
+			$animation-name
+		}
+		{
+			@content;
+		}
+		@-ms-keyframes #{
+			$animation-name
+		}
+		{
+			@content;
+		}
+		@-o-keyframes #{
+			$animation-name
+		}
+		{
+			@content;
+		}
+		@keyframes #{
+			$animation-name
+		}
+		{
+			@content;
+		}
+	}
+	@mixin animation ($delay, $duration, $animation, $direction, $fillmode, $iteration, $timing) {
+		-webkit-animation-delay: #{
+			$delay
+		}
+		;
+		-webkit-animation-duration: #{
+			$duration
+		}
+		;
+		-webkit-animation-name: #{
+			$animation
+		}
+		;
+		-webkit-animation-fill-mode: #{
+			$fillmode
+		}
+		;
+		-webkit-animation-direction: #{
+			$direction
+		}
+		;
+		-webkit-animation-iteration-count: #{
+			$iteration
+		}
+		;
+		-moz-animation-delay: #{
+			$delay
+		}
+		;
+		-moz-animation-duration: #{
+			$duration
+		}
+		;
+		-moz-animation-name: #{
+			$animation
+		}
+		;
+		-moz-animation-fill-mode: #{
+			$fillmode
+		}
+		;
+		-moz-animation-direction: #{
+			$direction
+		}
+		;
+		-moz-animation-iteration-count: #{
+			$iteration
+		}
+		;
+		animation-delay: #{
+			$delay
+		}
+		;
+		animation-duration: #{
+			$duration
+		}
+		;
+		animation-name: #{
+			$animation
+		}
+		;
+		animation-fill-mode: #{
+			$fillmode
+		}
+		;
+		animation-direction: #{
+			$direction
+		}
+		;
+		animation-iteration-count: #{
+			$iteration
+		}
+		;
+		animation-timing-function: #{
+			$timing
+		}
+		;
+	}
+	@include keyframes(animation-slide-in-left) {
+		0% {
+			width: 0%;
+		}
+		100% {
+			width: 100%;
+		}
+	}
+	#root{
+		height: 100vh;
+	}
+	.loading-bar{
+			z-index: 1;
+		height: 0.3vh;
+		width: 0vw;
+		position: fixed;
+			top: 0;
+			background-image: linear-gradient(to right, #14b4f5, #90b0f9, #ccadeb, #eeafd6, #fbb9c3);
+			@include animation(0s, 3s, animation-slide-in-left, normal, forwards, 1, ease);
+	}
+	.home-contents{
+		display: flex; 
+		justify-content: center;
+			background:#282c34;
+	}
+	.homepage{
+		font-family: "Source Sans Pro";
+		height: 100vh;
+		width: 90vw;background: gainsboro;
+	
+	}
+	.top-title{
+		font-size: $body-font-title;
+		display: flex;
+		justify-content: center;
+		font-weight: 900;
+		text-decoration-line: underline;
+	}
+footer{
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+    width: 100%;
+    border-top: 1px solid rgb(237, 28, 36);
+    font-size: $body-font-normal;
+	font-weight: 700; 
+	background-image: linear-gradient(to bottom, #ffffff, #fafafa, #f5f5f5, #f0f0f0, #ebebeb);
+}
