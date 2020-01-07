@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 params = {
     'DEBUG': True,
-    'WEBPACK_MANIFEST_PATH': './main/static/manifest.json',
+    'WEBPACK_MANIFEST_PATH': './src/main/static/manifest.json',
     "WEBPACK_ASSETS_URL": "webpack.common.js"
 }
 
