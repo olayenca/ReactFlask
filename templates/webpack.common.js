@@ -10,12 +10,13 @@ const path = require("path"),
 
 module.exports = env => ({
 	mode: env,
-	entry: "./src/main/public/index.tsx",
+	entry: {client: "./src/main/public/index.tsx", bundle: "./src/main/public/bundle.tsx"},
 	output: {
 		filename: "[name].bundle.js",
 		path: path.resolve(__dirname, "./build/dist/"),
 		chunkFilename: "[name].bundle.js",
-		publicPath: env === "production" ? "./" : "./" //todo redundant condition?
+		libraryTarget: "umd",
+		publicPath: env === "production" ? "./" : "./"
 	},
 	resolve: {
 		extensions: ['.js', '.tsx', '.scss', '.ts']
