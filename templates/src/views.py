@@ -1,15 +1,19 @@
 import os
-from flask import render_template, Blueprint, send_from_directory
+from flask import render_template, Blueprint, send_from_directory, request
 from flask_cors import CORS
-from react.render import render_component
+import subprocess
 
 src_blueprint = Blueprint(
     "main", __name__, static_folder="./main/static/", template_folder="./main/public")
-cors = CORS(src_blueprint)
+
 
 
 @src_blueprint.route('/', methods=['GET', 'POST'])
 def index():
-    rendered = render_component(os.path.join(
-        os.getcwd(), "templates", "src", "main", "public", 'index.tsx'), {'foo': 'bar'})
-    return render_template("child.html", rendered=rendered)
+    CORS(src_blueprint)
+    command_line_args = ['node', './src/main/public/server.js', request.path]
+    process = subprocess.Popen(command_line_args)
+    print(process)
+    context = "some text" #process.communicate()[0].decode('utf-8').strip()
+    print(context)
+    return render_template("contents.html", react_context=context)
