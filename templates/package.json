@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": ".",
-  "entry": "src/main/public/index.jsx",
+  "entry": "src/main/public/index.tsx",
   "dependencies": {
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
@@ -17,7 +17,7 @@
     "html-webpack-tags-plugin": "^2.0.17",
     "jquery": "^3.4.1",
     "parcel-bundler": "^1.12.4",
-    "react": "^116.12.0",
+    "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.12.0",
     "react-loading": "^2.0.3",
@@ -43,13 +43,9 @@
     "typescript": "3.3.3"
   },
   "scripts": {
-    "start:py": "py server.py",
-    "start:render": "node render_server.js",
+    "start:py": "python ../server.py",
     "watch": "node ./node_modules/webpack/bin/webpack.js --progress -d --config webpack.dev.js --watch",
     "build:webpack": "node ./node_modules/webpack/bin/webpack.js --config webpack.prod.js",
-    "start:react": "node ./node_modules/react-scripts/bin/react-scripts.js start",
-    "build:react": "node ./node_modules/react-scripts/bin/react-scripts.js build",
-    "test:react": "node ./node_modules/react-scripts/bin/react-scripts.js test",
     "start:webpack": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --config webpack.dev.js"
   },
   "eslintConfig": {

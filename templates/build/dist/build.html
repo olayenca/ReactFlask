@@ -10,13 +10,12 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="imgs/logo192.png" />
-  <link rel="manifest" href="manifest.json" /> 
-  {% endblock %}
-<link rel="shortcut icon" href="./favicon.ico"><link href="./main.css" rel="stylesheet"></head>
+  <link rel="manifest" href="manifest.json" /> {% endblock %}
+<link rel="shortcut icon" href="./favicon.ico"><link href="./0.css" rel="stylesheet"></head>
+
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
- <div id="root"></div> 
   {% block content %}{% endblock %}
-<script type="text/javascript" src="./main.bundle.js"></script><script type="text/javascript" src="./js/jquery.min.js"></script><script type="text/javascript" src="./js/bootstrap.min.js"></script></body>
-
+  <div id="root"></div>
+<script type="text/javascript" src="./bundle~client.bundle.js"></script><script type="text/javascript" src="./client.bundle.js"></script><script type="text/javascript" src="./bundle.bundle.js"></script><script type="text/javascript" src="./js/jquery.min.js"></script><script type="text/javascript" src="./js/bootstrap.min.js"></script></body>
 </html>
