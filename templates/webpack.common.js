@@ -10,7 +10,7 @@ const path = require("path"),
 
 module.exports = env => ({
 	mode: env,
-	entry: {client: "./src/main/public/index.tsx", bundle: "./src/main/public/bundle.tsx"},
+	entry: "./src/main/public/index.tsx",//{client: "./src/main/public/index.tsx", bundle: "./src/main/public/bundle.tsx"},
 	output: {
 		filename: "[name].bundle.js",
 		path: path.resolve(__dirname, "./build/dist/"),

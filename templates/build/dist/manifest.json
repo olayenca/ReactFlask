@@ -1,10 +1,7 @@
 {
   "name": "My Manifest",
-  "/static/bundle~client.css": "./0.css",
-  "/static/bundle~client.js": "./bundle~client.bundle.js",
-  "/static/bundle~client.css.map": "./0.css.map",
-  "/static/bundle.js": "./bundle.bundle.js",
-  "/static/client.js": "./client.bundle.js",
+  "/static/main.css": "./main.css",
+  "/static/main.js": "./main.bundle.js",
   "/static/./build.html": "././build.html",
   "/static/App.scss": "./SourceSansPro-Regular.otf",
   "/static/favicon.ico": "./favicon.ico",

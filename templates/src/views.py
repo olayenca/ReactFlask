@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import os
 from flask import render_template, Blueprint, send_from_directory, request
 from flask_cors import CORS
@@ -9,9 +10,9 @@ src_blueprint = Blueprint(
 @src_blueprint.route('/', methods=['GET', 'POST'])
 def index():
     CORS(src_blueprint)
-    command_line_args = ['node', './src/main/public/server.js', request.path]
+    command_line_args = ['node', './src/main/public/render_index.js', request.path]
     process = subprocess.Popen(command_line_args)
     print(process)
-    context = "some text" #process.communicate()[0].decode('utf-8').strip()
-    print(context)
+    context = "Text from python" #process.communicate()[0].decode('utf-8').strip()
+    #print(context)
     return render_template("contents.html", react_context=context)

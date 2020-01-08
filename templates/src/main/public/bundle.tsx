@@ -1,5 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
-import routes from "./routes";
+import { hydrate } from 'react-dom';
+import '../static/css/index.css';
+import routes from "./routes.js";
 
-render(routes, document.querySelector('#root'));
+hydrate(routes, document.querySelector('#root'));
