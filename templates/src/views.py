@@ -6,8 +6,6 @@ import subprocess
 src_blueprint = Blueprint(
     "main", __name__, static_folder="./main/static/", template_folder="./main/public")
 
-
-
 @src_blueprint.route('/', methods=['GET', 'POST'])
 def index():
     CORS(src_blueprint)
