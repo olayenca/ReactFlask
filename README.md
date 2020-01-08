@@ -1,1 +1,1 @@
-# Flask server with React frontend SSR configuration
+# Flask server with React & webpack frontend SSR configuration
