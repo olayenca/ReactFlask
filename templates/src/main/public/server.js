@@ -4,6 +4,6 @@ import { renderToString } from "react-dom/server";
 
 
   let content = renderToString(<div> WTF</div>);  
-  console.log(content);
-  export default content;
+  console.log(content)
+  //export default {content};
  
