@@ -23,5 +23,5 @@
 <div class="from--extension">
 	<p>Test String from block !</p>
 </div>
-<div id="root"> {{ react_context }}</div>
+<div id="root"> {{ react_context|safe }}</div>
 {% include "footer.html" %} {% endblock %}
