@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Jan  7 21:56:38 2020
-
 @author: olayinkaotuniyi
 """
 import platform
@@ -16,7 +15,6 @@ app.config.from_object('config.DevelopmentConfig')
 def before_request():
     app.jinja_env.cache = {}
 
-
 if platform.system() == "Linux":
     app.before_request(before_request)
     app.run(host='localhost', port=5000,
@@ -27,5 +25,5 @@ elif platform.system() == "Windows":
             debug=True)
 elif platform.system() == "Darwin":
     app.before_request(before_request)
-    app.run(host='localhost', port=3030,
+    app.run(host='localhost', port=6000,
             debug=True)
