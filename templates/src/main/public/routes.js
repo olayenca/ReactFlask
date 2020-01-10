@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
-import Landing from "./components/Landing";
-import Home from "./components/Home";
+import Landing from "./components/Landing.tsx";
+import Home from "./components/Home.tsx";
 
 export default (
   <HashRouter>

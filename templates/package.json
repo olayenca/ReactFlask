@@ -32,7 +32,14 @@
     "typescript": "^3.7.3",
     "webpack-cli": "^3.3.10",
     "webpack-merge": "^4.2.2",
-    "webpack-uglify-harmony-plugin": "^1.0.0"
+    "webpack-uglify-harmony-plugin": "^1.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/plugin-transform-typescript": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.7",
+    "@babel/register": "^7.7.7"
   },
   "devDependencies": {
     "@types/react": "^16.8.8",
@@ -45,6 +52,7 @@
   },
   "scripts": {
     "start:py": "python ../server.py",
+    "start": "node ./render_index.js",
     "watch": "node ./node_modules/webpack/bin/webpack.js --progress -d --config webpack.dev.js --watch",
     "build:webpack": "node ./node_modules/webpack/bin/webpack.js --config webpack.prod.js",
     "start:webpack": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --config webpack.dev.js"
@@ -62,6 +70,18 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-transform-typescript",
+      "syntax-dynamic-import"
     ]
   }
 }

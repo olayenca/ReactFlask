@@ -1,10 +1,9 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
-import routes from "./routes";
+//import routes from "./routes";
 
-export default function render() {
-  let content = renderToString(<div>server-generated</div>);
-  return {
-    content
-  };
-}
+
+  let content = renderToString(<div> WTF</div>);  
+  console.log(content);
+  export default content;
+ 

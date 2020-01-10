@@ -10,9 +10,9 @@ src_blueprint = Blueprint(
 @src_blueprint.route('/', methods=['GET', 'POST'])
 def index():
     CORS(src_blueprint)
-    command_line_args = ['node', './src/main/public/render_index.js', request.path]
+    command_line_args = ['npm', 'start', request.path]
     process = subprocess.Popen(command_line_args)
-    print(process)
+    print(process.communicate()[0])
     context = "Text from python" #process.communicate()[0].decode('utf-8').strip()
     #print(context)
     return render_template("contents.html", react_context=context)
