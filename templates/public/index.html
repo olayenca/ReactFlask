@@ -10,12 +10,11 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="imgs/logo192.png" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css" />
   <link rel="manifest" href="manifest.json" /> {% endblock %}
 </head>
-
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   {% block content %}{% endblock %}
-  <div id="root"></div>
 </body>
 </html>

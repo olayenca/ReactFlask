@@ -20,8 +20,6 @@
 	}
 </style>
 {% endblock head %} {% block content %} {% include "header.html" %}
-<div class="from--extension">
-	<p>Test String from block !</p>
-</div>
 <div id="root"> {{ react_context|safe }}</div>
+<script src="{{ url_for('static', filename='main.bundle.js') }}" type="text/JavaScript"></script>
 {% include "footer.html" %} {% endblock %}

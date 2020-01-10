@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../static/imgs/logo512.png';
-import '../../static/css/App.css';
 import '../../static/css/App.scss';
 
 function Landing() {
