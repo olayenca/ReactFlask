@@ -1,7 +1,6 @@
 #!/usr/bin/python
 import os
 from flask import render_template, Blueprint, request
-from flask_cors import CORS
 import subprocess
 
 src_blueprint = Blueprint(
@@ -11,7 +10,6 @@ src_blueprint = Blueprint(
 @src_blueprint.route('/<path>', methods=['GET', 'POST'])
 
 def index(path):
-    CORS(src_blueprint)
     command_line_args = ['node', os.path.join(os.getcwd(), "templates", "register_server.js"), request.path]
     process = subprocess.Popen(command_line_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     context = process.communicate()[0].decode('utf-8').strip()
