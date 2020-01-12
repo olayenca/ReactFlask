@@ -9,3 +9,5 @@ $ npm run start:python
 ```
 
 http://localhost:3030/src/
+
+Find Deployment options [here](https://flask.palletsprojects.com/en/1.1.x/deploying/)

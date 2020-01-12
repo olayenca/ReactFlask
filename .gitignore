@@ -19,6 +19,10 @@
 .env.production.local
 .pyc
 .vscode/
+main.bundle.js
+main.bundle.js.map
+main.css
+main.css.map
 
 npm-debug.log*
 yarn-debug.log*
