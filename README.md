@@ -3,8 +3,8 @@
 
 ```
 $ npm install 
-$ npm build:webpack
-$ npm start:python
+$ npm run build:webpack
+$ npm run start:python
 ```
 
 http://localhost:3030/src/
