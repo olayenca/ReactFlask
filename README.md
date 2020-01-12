@@ -1,2 +1,2 @@
-# Flask server with React & webpack frontend SSR configuration
-https://victor.pont.is/article/server-side-react/
+# Server-side Rendering (SSR) with React and Flask 
+WIP

@@ -25,5 +25,5 @@ elif platform.system() == "Windows":
             debug=True)
 elif platform.system() == "Darwin":
     app.before_request(before_request)
-    app.run(host='localhost', port=6000,
+    app.run(host='localhost', port=3030,
             debug=True)

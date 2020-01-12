@@ -1,5 +1,9 @@
 import React from 'react';
 import {hydrate} from 'react-dom';
-import Routes from './routes_server';
+import {Routes, BrowserRouter} from "./routes";
+import "../static/main.bundle";
+import { rehydrateMarks } from 'react-imported-component';
 
-hydrate(<Routes/>, document.getElementById('root'));
+//rehydrateMarks().then(() => {
+hydrate(<BrowserRouter><Routes /></BrowserRouter>, document.getElementById('root'));
+//});

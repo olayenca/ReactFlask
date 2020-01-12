@@ -1,14 +1,13 @@
 import React from 'react';
-import logo from '../../static/imgs/logo512.png';
 import '../../static/css/App.scss';
 
 function Landing() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="imgs/logo512.png" className="App-logo" alt="logo" />
         <p>
-          Edit <code>main/static/App.js</code> and save to reload.
+          Edit <code>templates/public/components/Landing.tsx</code> and reload.
         </p>
         <a
           className="App-link"

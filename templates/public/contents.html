@@ -8,7 +8,7 @@
 		border-top: 1px solid gainsboro;
 		bottom: 0;
 		position: fixed;
-		width: 99%;
+		width: 100%;
 		text-align: right;
 		margin: 0;
 	}
@@ -20,6 +20,5 @@
 	}
 </style>
 {% endblock head %} {% block content %} {% include "header.html" %}
-<div id="root"> {{ react_context|safe }}</div>
-<script src="{{ url_for('static', filename='main.bundle.js') }}" type="text/JavaScript"></script>
+<div id="root">{{react_context|safe}}</div>
 {% include "footer.html" %} {% endblock %}
