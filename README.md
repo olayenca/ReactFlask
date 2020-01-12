@@ -1,5 +1,6 @@
 # Server-side Rendering (SSR) with React and Flask 
 
+Assuming all necessary python libaries have been installed i.e. flask, virtualenv
 
 ```
 $ npm install 
