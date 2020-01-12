@@ -16,6 +16,3 @@ def index(path):
     process = subprocess.Popen(command_line_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     context = process.communicate()[0].decode('utf-8').strip()
     return render_template("contents.html", react_context=context)
-
-#<div class="home-contents"><div class="loading-bar"></div><div class="homepage"><header class="top-title"> Homepage! </header></div></div>
-#<div class="home-contents"><div class="loading-bar"></div><div class="homepage"><header class="top-title"> Homepage! </header></div></div>
