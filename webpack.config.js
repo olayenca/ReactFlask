@@ -1,13 +1,15 @@
 const path = require("path"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   autoprefixer = require("autoprefixer/lib/autoprefixer"),
-  UglifyJsPlugin = require("webpack-uglify-harmony-plugin");
+  UglifyJsPlugin = require("webpack-uglify-harmony-plugin"),
+  ASSET_PATH = process.env.ASSET_PATH || '/';
 
 module.exports = env => ({
   mode: env,
   entry: "./templates/public/index.tsx",
   output: {
     filename: "[name].bundle.js",
+    publicPath: ASSET_PATH,
     path: path.resolve(__dirname, "./templates/static/"),
     chunkFilename: "[name].bundle.js",
     libraryTarget: "umd",
@@ -116,7 +118,7 @@ module.exports = env => ({
       chunks: "all",
       minChunks: 3,
       minSize: 30000,
-      name: true
+      name: false
     },
     minimizer: [
       new UglifyJsPlugin({

@@ -5,7 +5,7 @@ function Landing() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="imgs/logo512.png" className="App-logo" alt="logo" />
+        <img src="/static/imgs/logo512.png" className="App-logo" alt="logo" />
         <p>
           Edit <code>templates/public/components/Landing.tsx</code> and reload.
         </p>
